@@ -19,16 +19,52 @@ defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 # Show the ~/Library folder.
 chflags nohidden ~/Library
 
-# Set a really fast key repeat.
-defaults write NSGlobalDomain KeyRepeat -int 1
+# Sets the dock size
+defaults write com.apple.Dock tilesize 42
+
+
+# 24-Hour Time
+defaults write com.apple.menuextra.clock DateFormat -string 'EEE MMM d  H:mm:ss'
+
+
+#Battery Percentage
+defaults write com.apple.menuextra.battery ShowPercent -string 'YES'
+
+#Menu items
+defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/Volume.menu" "/System/Library/CoreServices/Menu Extras/Battery.menu" "/System/Library/CoreServices/Menu Extras/Clock.menu"
+
+# Expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+
+# Disable the “Are you sure you want to open this application?” dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+# Trackpad: enable tap to click for this user and for the login screen
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# Finder: show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+#Natural Scrolling
+defaults write -g com.apple.swipescrolldirection -bool TRUE
+
+# Disable the warning when changing a file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+#Set zoom on and no smoothing
+defaults write com.apple.universalaccess closeViewSmoothImages -int 0
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -int 1
+
+# Enable snap-to-grid for icons on the desktop and in other icon views
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
 # Set the Finder prefs for showing a few different volumes on the Desktop.
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
-
-# Run the screensaver if we're in the bottom-left hot corner.
-defaults write com.apple.dock wvous-bl-corner -int 5
-defaults write com.apple.dock wvous-bl-modifier -int 0
 
 # Hide Safari's bookmark bar.
 defaults write com.apple.Safari ShowFavoritesBar -bool false

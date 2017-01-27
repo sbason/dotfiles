@@ -1,43 +1,81 @@
 "*":
+  "atom-beautify":
+    apex: {}
+    arduino: {}
+    c: {}
+    cfml: {}
+    coffeescript: {}
+    cpp: {}
+    cs: {}
+    css: {}
+    d: {}
+    ejs: {}
+    erb: {}
+    fortran: {}
+    general:
+      _analyticsUserId: "95994c73-c1ff-447d-a74d-79111a73d3e5"
+      beautifyEntireFileOnSave: false
+    gherkin: {}
+    handlebars: {}
+    html: {}
+    jade: {}
+    java: {}
+    js:
+      indent_size: 2
+      space_before_conditional: false
+    json: {}
+    jsx: {}
+    latex: {}
+    less: {}
+    marko: {}
+    mustache: {}
+    objectivec: {}
+    pawn: {}
+    perl: {}
+    php: {}
+    python: {}
+    riot: {}
+    ruby: {}
+    rust: {}
+    sass: {}
+    scss: {}
+    spacebars: {}
+    sql: {}
+    svg: {}
+    swig: {}
+    tss: {}
+    twig: {}
+    typescript: {}
+    vala: {}
+    visualforce: {}
+    xml: {}
+    xtemplate: {}
+  autosave:
+    enabled: true
   core:
-    disabledPackages: [
-      "background-tips"
-      "exception-reporting"
-      "metrics"
-    ]
-    followSymlinks: false
-    hideGitIgnoredFiles: true
-    ignoredNames: [
-      ".bundle"
-      ".git"
-      "log"
-      "repositories"
-      "tmp"
-      "vendor"
-    ]
     telemetryConsent: "no"
-    themes: [
-      "unity-ui"
-      "glacier-syntax"
-    ]
   editor:
-    fontFamily: "Menlo"
-    fontSize: 15
+    fontSize: 16
     invisibles: {}
-    showIndentGuide: true
-    softWrapAtPreferredLineLength: true
-  "go-plus":
-    panelDisplayMode: "closed"
+  "exception-reporting":
+    userId: "67f05e27-3b5a-3693-b57e-7f277eb0b29b"
+  linter:
+    errorPanelHeight: 40
   "linter-eslint":
-    useGlobalEslint: true
-  "release-notes":
-    viewedVersion: "0.89.0"
-  "spell-check":
-    grammars: [
-      "text.plain"
-      "source.gfm"
-      "text.git-commit"
-      "text.html.basic"
-    ]
+    fixOnSave: true
+  "linter-sass-lint":
+    configFile: "scripts/sass-lint.yml"
+  "markdown-preview-plus":
+    useGitHubStyle: true
+  minimap:
+    plugins:
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
   welcome:
     showOnStartup: false
